@@ -1,6 +1,6 @@
-# MyApp SystemD Service Unit
+# Elixir Application as SystemD Service
 
-This makes systemd responsible for keeping an application running.
+These instructions show you how to make systemd responsible for keeping an application running.
 If the underlying machine reboots, the application will be automatically started as well.
 If the application crashes, it will be automatically restarted.
 
