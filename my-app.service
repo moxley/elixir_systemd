@@ -1,0 +1,19 @@
+[Unit]
+Description=my-app service
+After=local-fs.target network.target
+
+[Service]
+Type=simple
+User=app
+Group=app
+WorkingDirectory=/home/app/my_app/
+ExecStart=/home/app/my_app/scripts/start
+ExecStop=/home/app/my_app/_build/prod/rel/my-app/bin/my_app stop
+Environment=LANG=en_US.utf8
+LimitNOFILE=65535
+UMask=0027
+SyslogIdentifier=my-app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
