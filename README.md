@@ -1,10 +1,10 @@
 # Elixir Application as SystemD Service
 
-These instructions show you how to make systemd responsible for keeping an application running.
+These instructions show how to make systemd responsible for keeping an application running.
 If the underlying machine reboots, the application will be automatically started as well.
 If the application crashes, it will be automatically restarted.
 
-These instructions fit with an Elixir application built with `mix release`,
+These instructions assume the application is an Elixir application built with `mix release`,
 but it can be adapted for other runtimes and situations. It assumes you've already
 run `MIX_ENV=prod mix release`, which writes release files to `_build/prod/rel/...`.
 
