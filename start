@@ -1,0 +1,10 @@
+#!/bin/bash -e
+
+# This script wraps around the application's start command,
+# so that secrets can be added to the application's environment
+# This example uses file-based secrets, but it can be adapted
+# pull secrets in a more secure manner, such as from AWS S3
+# or Vault.
+
+export $(cat /home/app/my_app/.secrets | xargs)
+/home/app/my_app/_build/prod/rel/uptime/bin/my_app start
