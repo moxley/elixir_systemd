@@ -19,6 +19,7 @@ run `MIX_ENV=prod mix release`, which writes release files to `_build/prod/rel/.
    sudo systemctl start my-app
    systemctl status my-app
    ```
+   Inspect the output of the status to ensure things are looking healthy.
 3. Enable the service:
    ```sh
    sudo systemctl enable my-app
